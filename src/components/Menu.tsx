@@ -1,7 +1,12 @@
-import React from "react";
+import Menuitem from "./Menuitem";
+import data from '../data/data.json'
 
 function Menu() {
-  return <div>Menu</div>;
+  return <>
+  {data.map((item)=> {
+    <Menuitem item={item}/>
+  })}
+  </>;
 }
 
 export default Menu;
