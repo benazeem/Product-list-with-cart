@@ -1,14 +1,15 @@
-import React from "react";
-import styles from './style.modules.css'
+// import React from "react";
+import React from 'react';
+import styles from './style.module.css'
 
-type btnPropType  {
+type btnPropType = {
 type : string,
 onClick : ()=> void,
-children : string,
+children? : React.ReactNode,
 }
 
-function Button({ type, onClick, children }) {
-  <>
+function Button({ type, onClick, children }:btnPropType) {
+  return <>
     <button className={styles[type]} onClick={onClick}>{children}</button>
   </>
 }
