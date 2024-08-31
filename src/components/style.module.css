@@ -1,81 +1,172 @@
-.menuHead{
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-radius: 30px;
-    padding-bottom: 1rem;
-    margin: 0 auto;
+.menuHead {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 30px;
+  padding-bottom: 1rem;
+  margin: 0 auto;
 }
-
 .menuHead > img {
-    background-size: contain;
-    width: 18rem;
-    height: 12rem;
-    border-radius: 0.5rem;
+  background-size: contain;
+  width: 18rem;
+  height: 12rem;
+  border-radius: 0.5rem;
 }
-
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+}
 .addCartBtn {
-    position: absolute;
-    bottom: 0px;
-    right: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    gap: 5px;
-    border: 1px solid;
-    border-radius: 50px;
-    padding: 0.75rem 1.25rem;
-    border-color: #b14848;
-    color: #111;   
-    margin: 0 auto;
+  position: absolute;
+  bottom: 0px;
+  right: 25%;
+  background-color: white;
+  gap: 5px;
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0.75rem 1.25rem;
+  border-color: #b14848;
+  color: #111;
+  margin: 0 auto;
 }
-
 .quantity {
-    border-radius: 100%;
-    border: 1px solid #fefefe;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
+  border-radius: 100%;
+  border: 1px solid #fefefe;
+  background: transparent;
+  width: 1.5rem;
+  height: 1.5rem;
 }
-
 .quantitydiv {
-    position: absolute;
-    bottom: 0px;
-    right: 25%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: #CB3A0E;
-    width: 7.5rem;
-    padding: 0.5rem;
-    border-radius:2rem;
-    margin: 0 auto;
+  position: absolute;
+  bottom: 0px;
+  right: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #cb3a0e;
+  width: 7.5rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  margin: 0 auto;
 }
-
 .itemBody {
-    text-align: left;
-    line-height: 0.4rem ;
-    padding: 0.5rem;
-    border-radius: 2rem;
-    margin: 0 auto;
+  text-align: left;
+  line-height: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  margin: 0 auto;
 }
-
 .itemBody > p:first-child {
-    font-size: 0.75rem;
-    color: gray;
-    /* font-weight: bold; */
-    /* color: #CB3A0E; */
+  font-size: 0.75rem;
+  color: gray;
 }
 
 .itemBody > p:last-child {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #CB3A0E;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #cb3a0e;
+}
+.cartcontainer {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding-bottom: 0.15rem;
+}
+.cartcontainer h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #cb3a0e;
+  text-align: left;
+  padding: 1.2rem;
+  padding-bottom: 0;
+}
+.cartcontainer .emptycart p {
+  color: #b90d0dcc;
+  font-weight: 650;
+}
+.activecart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartCard {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid #1111112a;
+  line-height: 0.1rem;
+}
+.cartCard p:first-child {
+  font-weight: 700;
+}
+.itemprices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #111111b4;
+}
+.activecart .itemprices p:first-child,
+.activecart .itemprices p:last-child {
+  font-weight: 700;
+  color: #cb3a0e;
+}
+.remove {
+  border-radius: 100%;
+  border: 1px solid #cb3a0e;
+  background: transparent;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.total {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total p:last-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #cb3a0e;
+}
+.carboninfo {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fcf8f5;
+  padding: 0.15rem;
+  border-radius: 0.5rem;
+}
+.confirmBtn {
+  background: #cb3a0e;
+  width: 90%;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem auto;
+  border-radius: 2.5rem;
+  border: transparent;
 }
 
+.confirmScreen {
+  z-index: 5;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.37);
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmedOrder {
+  width: 100%;
+  background-color: white;
+  padding: 3.5rem;
+  height: auto;
+  width: auto;
+}
