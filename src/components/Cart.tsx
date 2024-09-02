@@ -3,8 +3,8 @@ import styles from "./style.module.css";
 import { CartContext } from "../context/CartContext";
 import Button from "./Button";
 import { itemType } from "../Types";
-import carbonImg from "../assets/images/icon-carbon-neutral.svg";
-import emptyCartImg from "../assets/images/illustration-empty-cart.svg";
+import carbonImg from "../assets/icon-carbon-neutral.svg";
+import emptyCartImg from "../assets/illustration-empty-cart.svg";
 import ItemList from "./ItemList";
 import { setShowProps } from "../Types";
 

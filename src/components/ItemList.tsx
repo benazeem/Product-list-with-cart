@@ -3,7 +3,7 @@ import Button from "./Button";
 import styles from "./style.module.css";
 import { CartContext, CartDispatchContext } from "../context/CartContext";
 import { itemType } from "../Types";
-import removeIcon from "../assets/images/icon-remove-item.svg";
+import removeIcon from "../assets/icon-remove-item.svg";
 import { ItemListProps } from "../Types";
 
 function ItemList({ type }: ItemListProps) {

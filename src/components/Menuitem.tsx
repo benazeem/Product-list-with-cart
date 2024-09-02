@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { CartContext, CartDispatchContext } from "../context/CartContext";
 import Button from "./Button";
-import increase from "../assets/images/icon-increment-quantity.svg";
-import decrease from "../assets/images/icon-decrement-quantity.svg";
+import increase from "../assets/icon-increment-quantity.svg";
+import decrease from "../assets/icon-decrement-quantity.svg";
+import addCart from "../assets/icon-add-to-cart.svg";
 import styles from "./style.module.css";
 import { itemType } from "../Types";
 import { itemPropType } from "../Types";
@@ -60,7 +61,7 @@ function Menuitem({ item }: itemPropType) {
           </div>
         ) : (
           <Button onClick={handleClick} type={"addCartBtn"}>
-            <img src="/src/assets/images/icon-add-to-cart.svg" />
+            <img src={addCart} alt="Add to Cart" />
             <span>Add to Cart</span>
           </Button>
         )}
