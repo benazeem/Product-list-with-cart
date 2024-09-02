@@ -1,11 +1,9 @@
-import { itemType } from "../Types";
-
-export const initialCart: itemType[] = [];
+import { cartAction, initialCart, itemType } from "../Types";
 
 function CartReducer(
   items: itemType[],
-  action: { type: string; payload: itemType }
-) {
+  action: cartAction
+): itemType[] {
   switch (action.type) {
     case "addItem": {
       return [
@@ -15,7 +13,12 @@ function CartReducer(
           name: action.payload.name,
           price: action.payload.price,
           quantity: 1,
-          image: action.payload.image.thumbnail,
+          image: {
+            thumbnail: action.payload.image.thumbnail,
+            mobile: action.payload.image.mobile,
+            tablet: action.payload.image.tablet,
+            desktop: action.payload.image.desktop
+          }
         },
       ];
     }

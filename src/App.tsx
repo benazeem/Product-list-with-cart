@@ -1,9 +1,10 @@
 import { useReducer, useState } from "react";
 import { CartContext, CartDispatchContext } from "./context/CartContext";
-import CartReducer, { initialCart } from "./features/CartReducer";
+import CartReducer from "./features/CartReducer";
 import Confirmation from "./components/Confirmation";
 import Container from "./components/Container.tsx";
-// import "./App.css";
+import { initialCart, cartAction } from "./Types.tsx";
+
 
 function App() {
   const [isConfirm, setIsConfirm] = useState(false);
@@ -11,8 +12,8 @@ function App() {
 
   return (
     <>
-      <CartContext.Provider value={items}>
-        <CartDispatchContext.Provider value={dispatch}>
+      <CartContext.Provider value={items as never[]}>
+        <CartDispatchContext.Provider value={dispatch as React.Dispatch<cartAction | null>}>
           <Container setShow={setIsConfirm} />
           {isConfirm && <Confirmation setShow={setIsConfirm} />}
         </CartDispatchContext.Provider>

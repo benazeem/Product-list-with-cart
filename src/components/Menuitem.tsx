@@ -25,18 +25,18 @@ function Menuitem({ item }: itemPropType) {
   const handledecrese = () => {
     // console.log(e.target);
     if (itemquantity === 1) {
-      dispatch({ type: "removeItem", payload: item });
+      dispatch({ type: "removeItem", payload: { ...item, quantity: itemquantity } });
     } else {
-      dispatch({ type: "decItem", payload: item });
+      dispatch({ type: "decItem", payload: { ...item, quantity: itemquantity } });
     }
   };
-
+  
   const handleClick = () => {
-    dispatch({ type: "addItem", payload: item });
+    dispatch({ type: "addItem", payload: { ...item, quantity: itemquantity } });
   };
-
+  
   const handleincrese = () => {
-    dispatch({ type: "incItem", payload: item });
+    dispatch({ type: "incItem", payload: { ...item, quantity: itemquantity } });
   };
 
   return (
