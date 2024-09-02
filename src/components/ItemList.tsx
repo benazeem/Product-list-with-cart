@@ -6,6 +6,7 @@ import { itemType } from "../Types";
 import removeIcon from "../assets/icon-remove-item.svg";
 import { ItemListProps } from "../Types";
 
+
 function ItemList({ type }: ItemListProps) {
   const items = useContext(CartContext);
   const dispatch = useContext(CartDispatchContext);
