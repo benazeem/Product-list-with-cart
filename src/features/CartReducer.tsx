@@ -1,11 +1,11 @@
-export type itemType = {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-};
+import { itemType } from "../Types";
 
-function CartReducer(items: itemType[], action) {
+export const initialCart: itemType[] = [];
+
+function CartReducer(
+  items: itemType[],
+  action: { type: string; payload: itemType }
+) {
   switch (action.type) {
     case "addItem": {
       return [
@@ -22,7 +22,6 @@ function CartReducer(items: itemType[], action) {
     case "removeItem": {
       return items.filter((item: itemType) => {
         if (item.id !== action.payload.id) return item;
-        else return;
       });
     }
 
@@ -45,6 +44,10 @@ function CartReducer(items: itemType[], action) {
           };
         else return item;
       });
+    }
+
+    case "reset": {
+      return initialCart;
     }
 
     default:

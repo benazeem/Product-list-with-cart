@@ -1,21 +1,20 @@
-import { useReducer } from "react";
-import "./App.css";
-import Cart from "./components/Cart";
-import Menu from "./components/Menu";
+import { useReducer, useState } from "react";
 import { CartContext, CartDispatchContext } from "./context/CartContext";
-import CartReducer, { itemType } from "./features/CartReducer";
+import CartReducer, { initialCart } from "./features/CartReducer";
+import Confirmation from "./components/Confirmation";
+import Container from "./components/Container.tsx";
+// import "./App.css";
 
 function App() {
-  const initialCart: itemType[] = [];
-
+  const [isConfirm, setIsConfirm] = useState(false);
   const [items, dispatch] = useReducer(CartReducer, initialCart);
 
   return (
     <>
       <CartContext.Provider value={items}>
         <CartDispatchContext.Provider value={dispatch}>
-          <Menu />
-          <Cart />
+          <Container setShow={setIsConfirm} />
+          {isConfirm && <Confirmation setShow={setIsConfirm} />}
         </CartDispatchContext.Provider>
       </CartContext.Provider>
     </>
