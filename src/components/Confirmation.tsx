@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import confirmIcon from "../assets/icon-order-confirmed.svg";
+import confirmIcon from "/assets/icon-order-confirmed.svg";
 import { CartDispatchContext } from "../context/CartContext";
 import Button from "./Button";
 import ItemList from "./ItemList";

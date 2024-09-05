@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { CartContext, CartDispatchContext } from "../context/CartContext";
 import Button from "./Button";
-import increase from "../assets/icon-increment-quantity.svg";
-import decrease from "../assets/icon-decrement-quantity.svg";
-import addCart from "../assets/icon-add-to-cart.svg";
+import increase from "/assets/icon-increment-quantity.svg";
+import decrease from "/assets/icon-decrement-quantity.svg";
+import addCart from "/assets/icon-add-to-cart.svg";
 import styles from "./style.module.css";
 import { itemType } from "../Types";
 import { itemPropType } from "../Types";

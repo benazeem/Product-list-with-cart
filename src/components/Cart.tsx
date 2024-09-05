@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import styles from "./style.module.css";
 import { CartContext } from "../context/CartContext";
 import Button from "./Button";
-import { itemType } from "../Types";
-import carbonImg from "../assets/icon-carbon-neutral.svg";
-import emptyCartImg from "../assets/illustration-empty-cart.svg";
 import ItemList from "./ItemList";
+import styles from "./style.module.css";
+import carbonImg from "/assets/icon-carbon-neutral.svg";
+import emptyCartImg from "/assets/illustration-empty-cart.svg";
+import { itemType } from "../Types";
 import { setShowProps } from "../Types";
 
 const Cart: React.FC<setShowProps> = ({ setShow }) => {
