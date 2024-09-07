@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Product List with Cart Solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository showcases my solution to the [Product List with Cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). These challenges are designed to help developers enhance their skills by building realistic, real-world projects.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The Challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [Development Process](#development-process)
+  - [Built With](#built-with)
+  - [Key Learnings](#key-learnings)
+  - [Future Improvements](#future-improvements)
+  - [Resources](#resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The Challenge
 
-- Configure the top-level `parserOptions` property like this:
+In this project, users should be able to:
+
+- Add and remove items from the cart
+- Adjust the quantity of items in the cart
+- View an order confirmation modal upon clicking "Confirm Order"
+- Reset their cart by selecting "Start New Order"
+- Experience a responsive design that adapts to different screen sizes
+- See hover and focus states for all interactive elements
+
+### Screenshot
+
+*(Add your screenshot here)*
+
+### Links
+
+- [Solution URL](#) (add your solution link here)
+- [Live Site URL](https://productlist-with-cart.netlify.app/)
+
+## Development Process
+
+### Built With
+
+- [React.js](https://reactjs.org/) – JavaScript library for building user interfaces
+- Custom CSS modules – Scoped CSS to maintain component-level styling
+- Flexbox and CSS Grid – For responsive, flexible layout design
+- Mobile-first workflow – Ensuring a seamless experience across devices
+
+### Key Learnings
+
+This project allowed me to:
+
+- Leverage `useReducer` and the Context API for efficient state management across the app.
+- Implement scoped styling through CSS modules to enhance modularity and readability.
 
 ```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+const cartReducer = (state, action) => {
+  switch (action.type) {
+    case "ADD_ITEM":
+      return { ...state, cart: [...state.cart, action.payload] };
+    // additional logic...
+  }
+};
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Future Improvements
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+While the project is complete, there are a few areas I plan to refine:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Code readability**: Improve modularization and incorporate best practices for cleaner, more maintainable code.
+- **Performance optimization**: Implement more efficient state management patterns for larger-scale applications.
+- **Accessibility**: Focus on enhancing accessibility, ensuring that the UI is user-friendly for a broader audience.
+- Will deepen my understanding of structuring and organizing CSS using BEM (Block Element Modifier) conventions, improving both maintainability and scalability of styles.
+
+
+### Resources
+
+- [React.js Documentation](https://react.dev/reference/react) – Comprehensive guide for React hooks and state management.
+- [W3Schools CSS Documentation](https://www.w3schools.com/css/) – Excellent reference for CSS fundamentals and advanced topics.
+
+## Author
+
+- Frontend Mentor - [@benazeem](https://www.frontendmentor.io/profile/benazeem)
+- LinkedIn - [@devazeem](https://www.linkedin.com/in/devazeem/)
+
+## Acknowledgments
+
+I would like to extend my appreciation to the Frontend Mentor community for providing a collaborative platform that inspires continual learning and improvement. The official documentation for React and CSS was instrumental in helping me implement best practices, while community feedback played a significant role in refining the solution. 
