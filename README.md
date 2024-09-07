@@ -30,7 +30,7 @@ In this project, users should be able to:
 - See hover and focus states for all interactive elements
 
 ### Screenshot
-Active Window.png
+
 ![Active Window](Window.png)
 ![Active Ordered](Ordered.png)
 
