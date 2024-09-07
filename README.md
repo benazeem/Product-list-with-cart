@@ -31,8 +31,8 @@ In this project, users should be able to:
 
 ### Screenshot
 
-[Active Window](Active Window.png)
-[Active Ordered] (Active Ordered.png)
+![Active Window](Active\ Window.png)
+![Active Ordered] (Active\ Ordered.png)
 
 
 ### Links
